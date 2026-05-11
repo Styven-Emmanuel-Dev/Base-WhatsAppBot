@@ -1,0 +1,21 @@
+{
+  "name": "Hokage Crash",
+  "version": "5.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "npm:@alannxd/baileys",
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.3.1",
+    "pino": "^8.16.0",
+    "telegraf": "^4.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
