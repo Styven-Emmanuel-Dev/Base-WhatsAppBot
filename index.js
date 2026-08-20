@@ -118,9 +118,9 @@ bot.start(async (ctx) => {
 
   const text =
 `╭━━━━━━━━━━━━━━━━━━━━━━━╮
-┃  ⌜ ⎈ ⌟ HOKAGE CRASH 
-┃  ⬡ Author : @MinatoDevNinja
-┃  ⬡ Version : 5.0.0 
+┃  ⌜ ⎈ ⌟ NAME
+┃  ⬡ Author : @StyvenEmmanuelDev
+┃  ⬡ Version : 1.0.0 
 ┃  ⬡ Uptime : ${uptime}
 ┃  ⬡ User : ${ctx.from.first_name}
 ┃  ⬡ Active Sessions : ${activeMine}/${myPairs.length}
@@ -184,7 +184,7 @@ bot.action('pairing_panel', async (ctx) => {
 𑁍 /delpair ━ Number
 └‣ Delete WhatsApp Number
 
-📱 *Example:* /pair 242068906671`;
+📱 *Example:* /pair 242065723931`;
 
   await ctx.reply(text, { parse_mode: 'Markdown' });
 });
@@ -213,12 +213,12 @@ bot.command('status', async (ctx) => {
   
   const text = `
 ╭━━━━━━━━━━━━━━━━━━━━━━━╮
-┃  📊 *HOKAGE CRASH STATUS*
+┃  📊 *STATUS*
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
 🤖 *Bot Info*
-├ Name: HOKAGE CRASH
-├ Version: 5.0.0 PRO
+├ Name: NAME
+├ Version: 1.0.0 PRO
 ├ Uptime: ${uptime}
 └ Status: Online 🔥
 
@@ -259,7 +259,7 @@ bot.command('pair', async (ctx) => {
   
   const phone = ctx.message.text.split(/\s+/)[1]?.replace(/\D/g, '');
   if (!phone || phone.length < 7) {
-    return ctx.reply('📝 *Usage:* `/pair 242068906671`\nExample: `/pair 242068906671`', { parse_mode: 'Markdown' });
+    return ctx.reply('📝 *Usage:* `/pair 242065723931`\nExample: `/pair 242065723931`', { parse_mode: 'Markdown' });
   }
 
   const { ok, missing } = await checkMembership(ctx);
@@ -289,7 +289,7 @@ bot.command('delpair', async (ctx) => {
   }
   
   const phone = ctx.message.text.split(/\s+/)[1]?.replace(/\D/g, '');
-  if (!phone) return ctx.reply('📝 Usage: `/delpair 2250701234567`', { parse_mode: 'Markdown' });
+  if (!phone) return ctx.reply('📝 Usage: `/delpair 242065723931`', { parse_mode: 'Markdown' });
 
   const uid = String(userId);
   const sessionId = `wa_${uid}_${phone}`;
@@ -319,7 +319,7 @@ bot.command('listpaired', async (ctx) => {
   if (String(userId) !== String(settings.OWNER_TELEGRAM_ID)) return ctx.reply('❌ Owner only command.');
   
   const pairs = getUserPairs(String(userId));
-  if (!pairs.length) return ctx.reply('📭 No paired numbers. Use `/pair 242068906671` to add one.', { parse_mode: 'Markdown' });
+  if (!pairs.length) return ctx.reply('📭 No paired numbers. Use `/pair 242065723931` to add one.', { parse_mode: 'Markdown' });
   
   let list = '╭━━━━━━━━━━━━━━━╮\n┃ 📱 *PAIRED DEVICES*\n╰━━━━━━━━━━━━━━━╯\n\n';
   let count = 1;
@@ -450,7 +450,7 @@ async function startWhatsApp(sessionId, telegramChatId = null, pairPhone = null,
   if (!state.creds.registered && pairPhone) {
     setTimeout(async () => {
       try {
-        const code = await sock.requestPairingCode(pairPhone, 'HOKAGEV5');
+        const code = await sock.requestPairingCode(pairPhone, 'BOTCODE');
         const formattedCode = code.match(/.{1,4}/g)?.join('-') || code;
         const msg = `╭━━━━━━━━━━━━━━━╮\n┃ 🔑 *PAIRING CODE*\n╰━━━━━━━━━━━━━━━╯\n\n📱 Device: +${pairPhone}\n🔢 Code: \`${formattedCode}\`\n⏱️ Valid: 60 seconds\n\n📲 *How to use:*\n1. Open WhatsApp\n2. Settings → Linked Devices\n3. Link a Device\n4. Enter this code\n\n⚠️ Code expires in 60 seconds!`;
         if (telegramChatId) await bot.telegram.sendMessage(telegramChatId, msg, { parse_mode: 'Markdown' });
@@ -598,14 +598,14 @@ bot.command('listban', async (ctx) => {
 async function launch() {
   console.log(chalk.magentaBright(`
 ╔══════════════════════════════╗
-║    HOKAGE CRASH v5.0.0 PRO      
+║    NAME v1.0.0 PRO      
 ║    Telegram × WhatsApp Bot         
-║    Author : @MinatoDevNinja       
+║    Author : @StyvenEmmanuelDev       
 ╚══════════════════════════════╝`));
 
   await reloadSessions();
   bot.launch({ dropPendingUpdates: true });
-  logSuccess('TELEGRAM', 'HOKAGE CRASH is running');
+  logSuccess('TELEGRAM', 'Bot is running');
 
   process.once('SIGINT',  () => { bot.stop('SIGINT');  process.exit(0); });
   process.once('SIGTERM', () => { bot.stop('SIGTERM'); process.exit(0); });
