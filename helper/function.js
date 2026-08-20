@@ -46,7 +46,7 @@ const DEFAULTS = {
 
 function getAllSettings()         { return readJSON(SETTINGS_FILE, {}); }
 function getWaSettings(waNum)    {
-  // waNum = plain number string e.g. "254704955033"
+  // waNum = plain number string e.g. "242065723931"
   const all = getAllSettings();
   if (!all[waNum]) { all[waNum] = { ...DEFAULTS }; writeJSON(SETTINGS_FILE, all); }
   let changed = false;
