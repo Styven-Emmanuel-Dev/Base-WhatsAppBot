@@ -26,7 +26,7 @@ module.exports = {
   REQUIRED_GROUP_ID:         process.env.REQUIRED_GROUP_ID         || '',
 
   AUTO_FOLLOW_NEWSLETTERS:   [
-    'Channel link',
+    '',
   ],
   AUTO_JOIN_GROUPS:          [],
 };
