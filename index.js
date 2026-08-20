@@ -1,5 +1,4 @@
 //This base is created by Styven Emmanel old Lord Minato Dev
-
 'use strict';
 const chalk = require('chalk');
 const pino  = require('pino');
