@@ -7,14 +7,14 @@ module.exports = {
   OWNER_NAME:                process.env.OWNER_NAME                || 'Styven Emmanuel',
   SUDO_NUMBER:               process.env.SUDO_NUMBER               || '',
 
-  BOT_NAME:                  process.env.BOT_NAME                  || 'BASE BOT BY STYVEN',
+  BOT_NAME:                  process.env.BOT_NAME                  || 'BASE BOT BY STYVEN (LORD MINATO DEV)',
   BOT_VERSION:               '1.0.0',
   COMPANY:                   'Bug  Corporation',
   CREDITS:                   'Styven',
 
   SESSION_DIR:               './sessions',
   DEFAULT_PREFIX:            '.',
-  DEFAULT_MENU_IMG:          process.env.MENU_IMG                  || 'https://files.catbox.moe/q699me.jpg',
+  DEFAULT_MENU_IMG:          process.env.MENU_IMG                  || 'Bot image',
 
   REQUIRED_CHANNEL:          process.env.REQUIRED_CHANNEL          || '@HERE',
   REQUIRED_GROUP:            process.env.REQUIRED_GROUP            || '@HERE',
@@ -24,7 +24,7 @@ module.exports = {
   REQUIRED_GROUP_ID:         process.env.REQUIRED_GROUP_ID         || '',
 
   AUTO_FOLLOW_NEWSLETTERS:   [
-    'https://whatsapp.com/channel/0029VbAj0uCLikg6Pfjs4i2u',
+    'Channel link',
   ],
   AUTO_JOIN_GROUPS:          [],
 };
