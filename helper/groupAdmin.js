@@ -6,15 +6,7 @@
 
 const chalk = require('chalk');
 
-/**
- * NORMALIZE ANY JID TO PLAIN DIGITS
- * Handles ALL formats:
- *   "254704955033:7@s.whatsapp.net"  → "254704955033"
- *   "254704955033@s.whatsapp.net"    → "254704955033"
- *   "120363XXXXXXXX@g.us"            → "120363XXXXXXXX"
- *   "12345678901234567890@lid"        → "12345678901234567890"
- *   "254704955033"                    → "254704955033"
- */
+
 function normNum(jid) {
   if (!jid) return '';
   const s = String(jid);
