@@ -2,24 +2,24 @@
 require('dotenv').config();
 
 module.exports = {
-  TELEGRAM_TOKEN:            process.env.TELEGRAM_TOKEN            || '8466283349:AAFxmjYjPsv4OYaeAXkrIPvnfL0lwLcPvY0',
-  OWNER_TELEGRAM_ID:         process.env.OWNER_TELEGRAM_ID         || '7805068387',
-  OWNER_NAME:                process.env.OWNER_NAME                || 'Minato',
+  TELEGRAM_TOKEN:            process.env.TELEGRAM_TOKEN            || 'PUT YOUR TELEGRAM BOT TOKEN HERE',
+  OWNER_TELEGRAM_ID:         process.env.OWNER_TELEGRAM_ID         || 'YOUR TG ID',
+  OWNER_NAME:                process.env.OWNER_NAME                || 'Styven Emmanuel',
   SUDO_NUMBER:               process.env.SUDO_NUMBER               || '',
 
-  BOT_NAME:                  process.env.BOT_NAME                  || 'HOKAGE CRASH',
-  BOT_VERSION:               '5.0.0',
-  COMPANY:                   'Bug Hokage Corporation',
-  CREDITS:                   'Minato',
+  BOT_NAME:                  process.env.BOT_NAME                  || 'BASE BOT BY STYVEN',
+  BOT_VERSION:               '1.0.0',
+  COMPANY:                   'Bug  Corporation',
+  CREDITS:                   'Styven',
 
   SESSION_DIR:               './sessions',
   DEFAULT_PREFIX:            '.',
   DEFAULT_MENU_IMG:          process.env.MENU_IMG                  || 'https://files.catbox.moe/q699me.jpg',
 
-  REQUIRED_CHANNEL:          process.env.REQUIRED_CHANNEL          || '@MinatoDev_c2',
-  REQUIRED_GROUP:            process.env.REQUIRED_GROUP            || '@DevMinatoChannel',
-  REQUIRED_CHANNEL_LINK:     process.env.REQUIRED_CHANNEL_LINK     || 'https://t.me/MinatoDev_c2',
-  REQUIRED_GROUP_LINK:       process.env.REQUIRED_GROUP_LINK       || 'https://t.me/DevMinatoChannel',
+  REQUIRED_CHANNEL:          process.env.REQUIRED_CHANNEL          || '@HERE',
+  REQUIRED_GROUP:            process.env.REQUIRED_GROUP            || '@HERE',
+  REQUIRED_CHANNEL_LINK:     process.env.REQUIRED_CHANNEL_LINK     || 'HERE',
+  REQUIRED_GROUP_LINK:       process.env.REQUIRED_GROUP_LINK       || 'HERE',
   REQUIRED_CHANNEL_ID:       process.env.REQUIRED_CHANNEL_ID       || '',
   REQUIRED_GROUP_ID:         process.env.REQUIRED_GROUP_ID         || '',
 
